@@ -1,0 +1,1070 @@
+/*------------------------------------CSS-СБРОС-------------------------------------*/
+
+    html, body, div, span, applet, object, iframe,
+    h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+    a, abbr, acronym, address, big, cite, code,
+    del, dfn, em, img, ins, kbd, q, s, samp,
+    small, strike, strong, sub, sup, tt, var,
+    b, u, i, center,
+    dl, dt, dd, ol, ul, li,
+    fieldset, form, label, legend,
+    table, caption, tbody, tfoot, thead, tr, th, td,
+    article, aside, canvas, details, embed, 
+    figure, figcaption, footer, header, hgroup, 
+    menu, nav, output, ruby, section, summary,
+    time, mark, audio, video {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font: inherit;
+        vertical-align: baseline;
+    }
+    /* HTML5 display-role reset for older browsers */
+    article, aside, details, figcaption, figure, 
+    footer, header, hgroup, menu, nav, section {
+        display: block;
+    }
+    body {
+        line-height: 1;
+    }
+    ol, ul {
+        list-style: none;
+    }
+    blockquote, q {
+        quotes: none;
+    }
+    blockquote:before, blockquote:after,
+    q:before, q:after {
+        content: '';
+        content: none;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+/*--------------------------------------ОБЩЕЕ---------------------------------------*/
+
+    *{
+        -moz-box-sizing:border-box;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+    }
+
+    html,body{
+        background-image: url(/img/fon1.png);
+        font-family: 'El Messiri', sans-serif;
+    }
+
+    .main_wrapper{
+        position: relative;
+        max-width: 960px;
+        margin: 70px auto 0 auto;
+        padding: 0 25px 30px 30px;
+        background: rgb(255,255,255); 
+        box-shadow: 0 0 10px 2px rgba(0,0,0,.75);
+    }
+
+    h{
+        display: inline-block;
+        font: 40px/32px 'Yeseva One', cursive;
+        color:#43283E; 
+        text-shadow: 4px 3px 6px rgba(0,0,0,.6);
+        clear: both;  
+    }
+
+    h:not(.h_contacts){
+        margin: 50px 0;
+    }
+
+    p{
+        font-family: 'El Messiri', sans-serif;
+        font-size: 19px;
+        line-height: 1.5;
+        color: #333333;  
+        text-align:justify;       
+    }
+
+    /*класс great для выделенного текста в абзацах*/
+    .great{
+        font: bold 18px 'El Messiri', sans-serif;
+        color: #43283E;
+    }
+
+    ::selection{
+        color: #43283E;
+        background-color: #FC7D80;
+    }
+
+    ::-moz-selection{
+        color: #43283E;
+        background-color: #FC7D80;
+    }
+
+    form{
+        font-family: 'El Messiri', sans-serif;
+        font-size: 12px;
+        line-height: 1.5;
+        color: #333333;
+        font-weight: bold;
+        border-radius: 30px;
+    }
+
+    input, textarea, select{
+        border-radius: 5px;
+    }
+
+    h4.modal-title{
+        font-size: 20px;
+        text-shadow: 1px 1px 3px #666, -1px -1px 3px #FFF, 1px 1px #666, -1px -1px #FFF; 
+        color: #43283E;
+        font-family: 'El Messiri', sans-serif;
+    }
+
+    input[type="text"], textarea{
+        width: 100%;
+    }
+
+    textarea{
+        height: 100px;
+    }
+
+    .add_request, .add_question{  
+        margin: 10px;
+        margin-right: 30px;
+        -o-transition: all .5s;
+        -moz-transition: all .5s;
+        -webkit-transition: all .5s;
+        transition: all .5s;   
+        cursor: pointer;
+        font-size: 14px;
+        color: #1d0540;
+        padding: 10px 20px;
+        background: -moz-linear-gradient(
+            top,
+            #a196a1 0%,
+            #fff5ff);
+        background: -webkit-gradient(
+            linear, left top, left bottom,
+            from(#a196a1),
+            to(#fff5ff));
+        -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
+        border-radius: 30px;
+        border: 1px solid #e3e3e3;
+        -moz-box-shadow:
+            0px 1px 3px rgba(235,223,224,0.5),
+            inset 0px 0px 1px rgba(000,000,000,0.7);
+        -webkit-box-shadow:
+            0px 1px 3px rgba(235,223,224,0.5),
+            inset 0px 0px 1px rgba(000,000,000,0.7);
+        box-shadow:
+            0px 1px 3px rgba(235,223,224,0.5),
+            inset 0px 0px 1px rgba(000,000,000,0.7);
+        text-shadow:
+            0px -1px 0px rgba(000,000,000,0.4),
+            0px 1px 0px rgba(255,255,255,0.3);
+    }
+
+    .add_request:hover, .add_question:hover{
+         -webkit-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        transform: scale(1.1);
+        font-size: 14px;
+        color: #1d0540;
+        padding: 10px 20px;
+        background: -moz-linear-gradient(
+            top,
+            #fff5ff 0%,
+            #a196a1);
+        background: -webkit-gradient(
+            linear, left top, left bottom,
+            from(#fff5ff),
+            to(#a196a1));
+        -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
+        border-radius: 30px;
+        border: 1px solid #e3e3e3;
+        -moz-box-shadow:
+            0px 1px 3px rgba(235,223,224,0.5),
+            inset 0px 0px 1px rgba(000,000,000,0.7);
+        -webkit-box-shadow:
+            0px 1px 3px rgba(235,223,224,0.5),
+            inset 0px 0px 1px rgba(000,000,000,0.7);
+        box-shadow:
+            0px 1px 3px rgba(235,223,224,0.5),
+            inset 0px 0px 1px rgba(000,000,000,0.7);
+        text-shadow:
+            0px -1px 0px rgba(000,000,000,0.4),
+            0px 1px 0px rgba(255,255,255,0.3);
+    }
+
+/*----------------------------------стрелка вверх-----------------------------------*/
+
+    .btnUp{
+        line-height: 50px;
+        height: 60px;
+        width: 60px;
+        text-align: center;
+        position: fixed;
+        right: 40px;
+        bottom: 30px;
+        cursor: pointer;
+        display: none;
+        z-index: 5;
+        opacity: 0.6;
+        -o-transition: all .5s;
+        -moz-transition: all .5s;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+
+    .btnUp:hover{
+        opacity: 1;
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    .btnUp:focus{
+        opacity: 1;
+    }
+
+/*-----------------------------------МЕНЮ-------------------------------------------*/
+
+    nav{
+        margin: 0 auto;
+    }
+
+    nav ul {
+        display: table;
+        margin: 0 auto;
+    }
+
+    nav .wrapper{
+        height: 50px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background: #43283E;
+        color: #fff;
+        width: 100%;
+        text-align: center;
+        opacity: 0.9;
+        box-shadow: 0 0 10px rgba(0,0,0,10);
+        z-index: 5;
+    }
+
+    .menu li{
+        float: left;
+    }
+
+    .menu li a{
+        display: inline-block;
+        padding: 1.5px 12px;
+        font: 25px/50px 'El Messiri', sans-serif;
+        color: #E1D8E3;
+        transition: color 0.4s;
+        text-shadow: 0 2px 2px rgba(0, 0, 30, 0.6);
+        text-decoration: none;
+        opacity: 1;
+        z-index: 5;
+    }
+
+    .menu li a:focus{
+        color: #FDC5BF;
+        text-decoration: none;
+    }
+
+    .menu li a:hover{
+        color: #FDC5BF;
+        text-decoration: none;
+    }
+
+    .menu li a.active{
+        color: #FC7D80;
+    }
+
+    .menuToggle{
+        padding: 1.5px 12px;
+        display: none;
+        cursor: pointer;
+        width: 70px;
+        -o-transition: all .5s;
+        -moz-transition: all .5s;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+        position: fixed;
+        top: 0; 
+        left: 0;
+        z-index: 6; 
+        opacity: 0.8;   
+    }
+
+    .menuToggle:hover {
+        opacity: 0.9;
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+/*---------------------------------------ПОДВАЛ-------------------------------------*/
+
+    #contacts_print{
+        display: none;
+    }
+
+    footer .copyright {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        clear: both;
+        text-align: center;
+        font-size: 15px;
+    }
+
+    #contacts{
+        background: #E1D8E3;
+        overflow:hidden;
+        box-shadow: 0 0 10px rgba(0,0,0,10);  
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+
+    a.mail{
+        background-image: url(/img/mail.png);
+        background-size: 20px auto;
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 25px;
+        font-size: 19px; 
+        text-shadow: 1px 1px 3px #666, -1px -1px 3px #FFF, 1px 1px #666, -1px -1px #FFF; 
+        color:#43283E;
+        font-family: arial;
+        cursor: pointer;
+    }
+
+    a.phone{
+        background-image: url(/img/phone.png);
+        background-size: 20px auto;
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 25px;
+        font-size: 19px; 
+        text-shadow: 1px 1px 3px #666, -1px -1px 3px #FFF, 1px 1px #666, -1px -1px #FFF; 
+        color:#43283E;
+        font-family: arial;
+        cursor: pointer;
+    }
+
+    .address{
+        float: left; 
+        width: 34%;
+        padding: 3%;
+        text-align: center;
+    }
+
+    .network{
+        float: right;
+        width: 33%;
+        padding: 3%;
+        text-align: center;
+    }
+
+    .phone_and_email{
+        float: left;
+        width: 33%;
+        padding: 3%;
+        text-align: center;
+    }
+
+    .img_network{
+        width: 60px;
+        opacity: 0.5;
+        margin: 7px;
+        margin-top: 30px;
+        -o-transition: all .5s;
+        -moz-transition: all .5s;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+
+    .img_network:hover {
+        opacity: 0.8;
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+    }
+
+    #contacts p{
+        font-size: 19px; 
+        text-shadow: 1px 1px 3px #666, -1px -1px 3px #FFF, 1px 1px #666, -1px -1px #FFF; 
+        color:#43283E;
+        font-family: arial;
+        text-align: center;
+    }
+
+    #contacts h{
+        font: 30px/25px 'Yeseva One', cursive; 
+        text-shadow: 1px 1px 3px #666, -1px -1px 3px #FFF, 1px 1px #666, -1px -1px #FFF; 
+        color:#43283E;
+       
+    }
+
+/*-------------------------------------блог about-----------------------------------*/
+
+    .photo{
+        width:30%;   
+        float: left;
+        margin-bottom: 2%;
+        margin-right: 2%;
+        border:1px solid #AD9F9F;
+        background-color: #FFF;
+        padding: 4px;
+        box-shadow: 2px 2px 4px rgba(0,0,0,.5);
+    }
+
+    @-webkit-keyframes btn_about{
+        from{
+            -webkit-transform: scale(2.3);
+        }
+
+        to{
+            -webkit-transform: scale(1);
+        }
+    }
+
+    @-moz-keyframes btn_about{
+        from{
+            -webkit-transform: scale(2.3);
+        }
+
+        to{
+            -webkit-transform: scale(1);
+        }
+    }
+
+    @-o-keyframes btn_about{
+        from{
+            -webkit-transform: scale(2.3);
+        }
+
+        to{
+            -webkit-transform: scale(1);
+        }
+    }
+
+    @keyframes btn_about{
+        from{
+            -webkit-transform: scale(2.3);
+        }
+
+        to{
+            -webkit-transform: scale(1);
+        }
+    }
+
+    button.btn_about{
+        -webkit-animation: btn_about 3s;
+        -moz-animation: btn_about 3s;
+        -o-animation: btn_about 3s;
+        animation: btn_about 3s;
+        position: absolute; 
+        top: 30px; 
+        right: 40px;
+        -o-transition: all .5s;
+        -moz-transition: all .5s;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+        font-family: 'El Messiri', sans-serif;
+        font-size: 19px;
+        color: #ffffff;
+        padding: 10px 20px;
+        background: -moz-linear-gradient(
+            top,
+            #ebcde3 0%,
+            #f0c3eb 25%,
+            #5e3757);
+        background: -webkit-gradient(
+            linear, left top, left bottom,
+            from(#ebcde3),
+            color-stop(0.25, #f0c3eb),
+            to(#5e3757));
+        -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
+        border-radius: 30px;
+        border: 3px solid #ffffff;
+        -moz-box-shadow:
+            0px 3px 11px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(168,111,157,1);
+        -webkit-box-shadow:
+            0px 3px 11px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(168,111,157,1);
+        box-shadow:
+            0px 3px 11px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(168,111,157,1);
+        text-shadow:
+            0px -1px 0px rgba(199,185,185,0.4),
+            0px 1px 0px rgba(255,255,255,1);
+    }
+
+    button.btn_about:hover{
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+        cursor: pointer;
+        background: -moz-linear-gradient(
+            top,
+            #5e3757 0%,
+            #5e3757 25%,
+            #ebcde3);
+        background: -webkit-gradient(
+            linear, left top, left bottom,
+            from(#5e3757),
+            color-stop(0.25, #5e3757),
+            to(#ebcde3));
+        -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
+        border: 3px solid #5e3757;
+        -moz-box-shadow:
+            0px 3px 11px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(168,111,157,1);
+        -webkit-box-shadow:
+            0px 3px 11px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(168,111,157,1);
+    }
+
+    #form_request label.error {
+      font-size: 0.8em;
+      color: #F00;
+      font-weight: bold;
+      display: block;
+    }
+    #form_request  input.error, #form_request select.error  {
+      background: #FFA9B8;
+      border: 1px solid red;
+    }
+
+/*-----------------------------------блог price-------------------------------------*/
+
+    #price{
+        clear: both;
+    }
+
+    #price img{
+        width:30%;
+        clear: right;
+        float:right;
+        margin: 18px; 
+        border:1px solid #AD9F9F;
+        background-color: #FFF;
+        padding: 4px;
+        box-shadow: 2px 2px 4px rgba(0,0,0,.5);
+    }
+
+    #price #img3{
+        display: none;
+    }
+
+    #price table{
+        width: 60%;       
+    }
+
+    #price td, #price th{ 
+        font-family: 'El Messiri', sans-serif;
+        border: 2px solid #E1D8E3;
+        font-size: 19px;
+        color: #333333;          
+        padding: 1%;
+    }
+
+    #price th{
+        text-transform: uppercase;
+        text-align: center;
+        vertical-align: middle;
+        padding: 5px 0;
+        background: #43283E;
+        background: -webkit-linear-gradient(#43283E, #8D6D87);
+        background: -moz-linear-gradient(#43283E, #8D6D87);
+        background: -o-linear-gradient(#43283E, #8D6D87);
+        background: linear-gradient(#43283E, #8D6D87);
+        color: white;
+    }
+
+    #price tr:nth-of-type(even){
+        background-color: rgba(255,255,255,.1);
+    }
+
+    #price tr:nth-of-type(odd){
+        background-color: rgba(229,76,16,.1);
+    }
+
+    #price tr.first{
+        text-transform: uppercase;
+        text-align: center;
+        background: #E9CECE;
+        background: -webkit-linear-gradient(#FAC2C2, #E9CECE);
+        background: -moz-linear-gradient(#FAC2C2, #E9CECE);
+        background: -o-linear-gradient(#FAC2C2, #E9CECE);
+        background: linear-gradient(#FAC2C2, #E9CECE);
+    }
+
+/*-----------------------------------блог questions---------------------------------*/
+
+    #form_question label.error {
+      font-size: 0.8em;
+      color: #F00;
+      font-weight: bold;
+      display: block;
+    }
+    #form_question  input.error, #form_question textarea.error  {
+      background: #FFA9B8;
+      border: 1px solid red;
+    }
+
+    button.btn_question{
+        -o-transition: all .5s;
+        -moz-transition: all .5s;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+        font-family: 'El Messiri', sans-serif;
+        font-size: 19px;
+        color: #ffffff;
+        padding: 10px 20px;
+        background: -moz-linear-gradient(
+            top,
+            #ebcde3 0%,
+            #f0c3eb 25%,
+            #5e3757);
+        background: -webkit-gradient(
+            linear, left top, left bottom,
+            from(#ebcde3),
+            color-stop(0.25, #f0c3eb),
+            to(#5e3757));
+        -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
+        border-radius: 30px;
+        border: 3px solid #ffffff;
+        -moz-box-shadow:
+            0px 3px 11px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(168,111,157,1);
+        -webkit-box-shadow:
+            0px 3px 11px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(168,111,157,1);
+        box-shadow:
+            0px 3px 11px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(168,111,157,1);
+        text-shadow:
+            0px -1px 0px rgba(199,185,185,0.4),
+            0px 1px 0px rgba(255,255,255,1);
+    }
+
+    button.btn_question:hover{
+        -webkit-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        transform: scale(1.2);
+        cursor: pointer;
+        background: -moz-linear-gradient(
+            top,
+            #5e3757 0%,
+            #5e3757 25%,
+            #ebcde3);
+        background: -webkit-gradient(
+            linear, left top, left bottom,
+            from(#5e3757),
+            color-stop(0.25, #5e3757),
+            to(#ebcde3));
+        -moz-border-radius: 30px;
+        -webkit-border-radius: 30px;
+        border: 3px solid #5e3757;
+        -moz-box-shadow:
+            0px 3px 11px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(168,111,157,1);
+        -webkit-box-shadow:
+            0px 3px 11px rgba(000,000,000,0.5),
+            inset 0px 0px 1px rgba(168,111,157,1);
+    }
+
+    .item_question{
+        font-size: 19px;
+    }
+
+    h3{
+        cursor: pointer;
+        background-image: url(/img/plus.png);
+        padding: 10px;
+        background-size: 32px auto;
+        background-position: 0px 16px;
+        background-repeat: no-repeat;
+        padding-left: 35px;
+    }
+
+    h3:hover{
+        background-image: url(/img/plus2.png);
+    }
+
+    h3.close_question {
+        background-image: url(/img/minus.png);
+    }
+
+    h3.close_question2 {
+        background-image: url(/img/minus2.png);
+    }
+
+    .answer{
+        background-size: 30px auto;
+        background-repeat: no-repeat;
+        background-position: left center;
+        padding-left: 40px;
+        margin-left: 20px;
+    }
+
+/*-----------------------------------блог portfolio---------------------------------*/
+
+    figure img{
+        height:96%; 
+        width:96%;
+        border:1px solid #AD9F9F;
+        background-color: #FFF;
+        padding: 4px;
+        box-shadow: 2px 2px 4px rgba(0,0,0,.5);
+        -o-transition: all .5s;
+        -moz-transition: all .5s;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+
+    figure img:hover{
+        -webkit-transform: scale(1.1);
+        -o-transform: scale(1.1);
+        -moz-transform: scale(1.1);
+        transform: scale(1.1);
+        cursor: pointer;
+    }
+
+    figure{
+        float: left;
+        width: 25%;
+        margin: 0 2% 2% 2%;
+    }
+
+    .strelka{
+        background-image: url(/img/strelka.png);
+        background-size: 25px auto;
+        background-position: 0 0;
+        background-repeat: no-repeat;
+        padding-left: 32px;
+        padding-top: 0px;
+        margin-left: 6px;
+        text-transform: uppercase;
+    }
+
+/*--------------------------------------блог blog-----------------------------------*/
+    
+    #blog img{
+        width:30%;
+        clear: left;
+        float: left;
+        margin: 2% 3% 0 0; 
+        border:1px solid #AD9F9F;
+        background-color: #FFF;
+        padding: 4px;
+        box-shadow: 2px 2px 4px rgba(0,0,0,.5);
+    }
+
+    #blog #b_img1, #blog #b_img3{
+        display: none;
+    }
+
+/*------------------------------------Адаптивность----------------------------------*/
+
+    @media (max-width: 900px){
+        .menu li:nth-child(1){
+            margin-top: 50px;
+        }
+
+        .menu{
+            display: none;
+            position: absolute;
+            background: #43283E;
+        }
+
+        .menu li{
+            float: none;
+        }
+
+        .menuToggle{
+            display: inline-block;
+        }
+
+        .menu li a{
+            font: 20px/35px 'El Messiri', sans-serif;
+        }
+
+        .menu li:not(:nth-child(1)){
+           border-top: 1px solid #E1D8E3; 
+        }
+
+        .menu li:hover{
+            background-color: #E1D8E3;  
+        }
+
+        .menu li a:hover, .menu li a.active:hover {
+            color: #43283E;
+        }
+
+        .menu li a.active{
+            color: #E1D8E3;
+        }
+
+        .menu li a:focus{
+            color: #43283E;
+        }
+
+        .main_wrapper{
+            position: static;
+        }
+
+        button.btn_about{
+            position: fixed;
+            font-size: 15px;
+            padding: 4px 10px;
+            top: 7px; 
+            right: 15px;
+            z-index: 6;
+            background: #43283E; 
+            border: 1px solid #ffffff;
+        }
+    }
+
+    @media (max-width: 860px){
+
+        figure{
+            width: 33.3%;
+        }
+
+    }
+           
+    @media (max-width: 809px){
+
+        .photo{
+            width:36%;   
+        }
+        
+        #price #img1{
+            display: none;
+        }
+
+        #price #img2, #price #img3{
+            width: 46.5%;
+            display: inline-block;
+            float: none;
+            margin: 0 0 2% 0;
+        }
+
+        #price #img2{
+            margin-right: 2%;
+        }
+
+        #price table{
+            width: 96%;       
+        }
+
+        #blog #b_img2{
+            display: none;
+        }
+
+        #blog #b_img1, #blog #b_img3{
+            width: 46.5%;
+            display: inline-block;
+            float: none;
+            margin: 0 0 2% 0;
+        }
+
+        #blog #b_img1{
+            margin-right: 2%;
+        }
+
+    }
+
+    @media (max-width: 704px){
+
+        figure{
+            width: 50%;
+        }
+
+        .img_portfolio_none{
+            display: none;
+        }
+
+        h:not(.h_contacts){
+            margin: 35px 0;
+        }
+    
+    }
+
+    @media (max-width: 656px){
+
+        .main_wrapper{
+            margin-top: 57px;
+        }
+
+        .photo{
+            width:40%;   
+        }
+
+        .address{
+            float: left; 
+            width: 45%;
+            padding: 3%;
+            text-align: center;
+        }
+
+        .network{
+            float: right;
+            width: 50%;
+            padding: 3%;
+            text-align: center;
+        }
+
+        .phone_and_email{
+            float: none;
+            clear: both;
+            width: 100%;
+            padding: 3%;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .main_wrapper{
+            padding: 0 10px 15px 15px;
+        }
+
+        h{
+            font-size: 35px;
+        }
+
+        button.btn_question{
+            font-size:25px;
+        }
+
+        #contacts p{
+            font-size: 23px; 
+        }
+
+        #contacts h{
+            font-size: 35px; 
+        }
+
+        a.mail, a.phone{
+            font-size: 23px;   
+        }
+
+        h:not(.h_contacts){
+            margin: 30px 0;
+        }
+
+        button.btn_question{
+            font-size: 15px;
+            padding: 4px 10px;
+        }
+
+    }
+
+    @media (max-width: 600px){
+
+        p{
+            font-size: 16px;
+            line-height: 1.2; 
+        }
+
+        .great{
+            font-size: 15px;
+            line-height: 1.2;
+        }
+
+        #price td, #price th{ 
+            font-size: 16px;          
+            padding: 0.5%;
+            line-height: 1.2;
+        }
+
+        .item_question{
+            font-size:16px;
+            line-height: 1.2;
+        }
+
+        .item_question{
+            margin-bottom: 6px;
+        }
+
+        h{
+            font-size: 20px;
+            line-height: 0;
+        }
+
+    }
+
+    @media (max-width: 545px){
+
+        .address{ 
+            float: none;
+            clear: both;
+            width: 100%;
+            padding: 3%;
+            text-align: center;
+            border-bottom: 2px solid #fff;
+        }
+
+        .network{
+            float: right;
+            float: none;
+            clear: both;
+            width: 100%;
+            padding: 3%;
+            text-align: center;
+            border-bottom: 2px solid #fff;
+            margin-top: 20px;
+        }
+
+        #contacts p{
+            font-size: 18px;
+        }
+
+        #contacts h{
+            font-size: 27px; 
+        }
+
+        a.mail{
+            background-size: 18px auto;
+            font-size: 16px; 
+        }
+
+        a.phone{
+            background-size: 18px auto;
+            font-size: 18px; 
+        }
+
+        .main_wrapper{
+            padding: 0 9px 9px 9px;
+        }
+
+    }
+
+    
+
+
+
+
+
+

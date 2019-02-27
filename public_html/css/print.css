@@ -1,0 +1,48 @@
+
+.btnUp, .menu, .btn_about, .btn_question, title, .container, #contacts{
+    display: none;
+}
+
+.main_wrapper{
+    margin: 8% auto;
+    width: 100%;
+}
+
+*{
+    color: #000 !important; 
+    overflow: visible;
+    font-weight: normal !important;
+    font-size: 14pt !important;
+}
+
+h{
+    display: inline;
+    font-size: 20pt !important;
+    line-height: 2;
+}
+
+.photo{
+    width: 20% !important;
+}
+
+.questions_container .item_question .answer{
+    display: inline-block;
+}
+
+a:after{
+    content: " (" attr(href) ") ";
+}
+
+table{
+    width: 70%;
+}
+
+.item_question{
+    margin-bottom: 7px;
+}
+
+#contacts_print{
+    display: inline-block;
+}
+
+
